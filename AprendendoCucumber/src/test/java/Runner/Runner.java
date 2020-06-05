@@ -8,10 +8,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		//features = "src/test/resources/Features",
-		//glue = "StepDefs",
+		features = "src/test/resources/Features",
+		glue = "StepDefs",
 		plugin = "pretty", monochrome = true, snippets = SnippetType.CAMELCASE, dryRun = false, strict = true)
 
-public class Runner {
+public class Runner {	
 
 }

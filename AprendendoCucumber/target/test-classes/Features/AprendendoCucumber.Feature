@@ -1,6 +1,5 @@
 #language: pt
-
-  Funcionalidade: Aprender Cucumber
+Funcionalidade: Aprender Cucumber
   como um aluno
   eu quero aprender a utilizar Cucumber
   para que eu possa automatizar critérios de aceitação
@@ -9,8 +8,46 @@
     Dado que criei o arquivo corretamente
     Quando executa-lo
     Então a especificação deve finalizar com sucesso
-    
-   Cenario: Deve incrementar o contador 
+
+  Cenario: Deve incrementar o contador
     Dado que o valor do contador é 15
     Quando eu incrementar em 3
     Então o valor do contador será 18
+
+  Cenario: Deve incrementar o contador
+    Dado que o valor do contador é 123
+    Quando eu incrementar em 35
+    Então o valor do contador será 158
+
+  Cenario: Deve calcular a data de entrega
+    Dado que a entrega é dia 05/04/2020
+    Quando a entrega atrasar 2 dias
+    Então a entrega será efetuada em 07/04/2020
+
+  Cenario: Deve calcular atraso quando a entrega é da China
+    Dado que a entrega é dia 05/04/2020
+    Quando a entrega atrasar 2 meses
+    Então a entrega será efetuada em 05/06/2020
+    
+    Cenário: Deve criar steps genéricos para estes passos
+    Dado que o ticket é AF345
+    Dado que o valor da passagem é R$ 230,45
+    Dado que o nome do passageiro é "Fulano da Silva"
+    Dado que o telefone do passageiro é 9999-9999
+    Quando criar os steps
+    Então o teste vai funcionar
+
+Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
+    Dado que o ticket é AB167
+    Dado que o ticket especial é AB167
+    Dado que o valor da passagem é R$ 1120,23
+    Dado que o nome do passageiro é "Cicrano de Oliveira"
+    Dado que o telefone do passageiro é 9888-8888
+
+Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
+    Dado que o ticket é CD123
+    Dado que o ticket é AG1234
+    Dado que o valor da passagem é R$ 1.1345,56
+    Dado que o nome do passageiro é "Beltrano Souza Matos de Alcântara Azevedo"
+    Dado que o telefone do passageiro é 1234-5678
+    Dado que o telefone do passageiro é 999-2223
