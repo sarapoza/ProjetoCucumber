@@ -16,7 +16,7 @@ Funcionalidade: Aprender Cucumber
 
   Cenario: Deve incrementar o contador
     Dado que o valor do contador é 123
-    Quando eu incrementar em 35
+    Quando eu incrementar em 35 
     Então o valor do contador será 158
 
   Cenario: Deve calcular a data de entrega
