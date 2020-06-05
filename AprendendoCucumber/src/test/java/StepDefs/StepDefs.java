@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import converters.DateConverter;
+import cucumber.api.Transform;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -48,13 +50,19 @@ public class StepDefs {
 	Date entrega = new Date();
 	
 	@Dado("^que a entrega é dia (\\d+)/(\\d+)/(\\d+)$")
-	public void queAEntregaÉDia(int dia, int mes, int ano) throws Throwable {
+	public void queAEntregaEDia(int dia, int mes, int ano) throws Throwable {
 	    Calendar cal = Calendar.getInstance();
 	    cal.set(Calendar.DAY_OF_MONTH, dia);
 	    cal.set(Calendar.MONTH, mes -1);
 	    cal.set(Calendar.YEAR, ano);
 	    entrega = cal.getTime();
 	}
+	
+//	@Dado("^que a entrega é dia (\\*d)$")
+//	public void queAEntregaEDia(@Transform(DateConverter.class) Date data) throws Throwable {
+//	   entrega = data;
+//	   System.out.println(entrega);
+//	}
 
 	@Quando("^a entrega atrasar (\\d+) (dia|dias|mes|meses)$")
 	public void aEntregaAtrasarDias(int arg1, String tempo) throws Throwable {

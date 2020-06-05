@@ -28,7 +28,8 @@ Funcionalidade: Aprender Cucumber
     Dado que a entrega é dia 05/04/2020
     Quando a entrega atrasar 2 meses
     Então a entrega será efetuada em 05/06/2020
-    
+  
+@ignore    
     Cenário: Deve criar steps genéricos para estes passos
     Dado que o ticket é AF345
     Dado que o valor da passagem é R$ 230,45
@@ -37,6 +38,7 @@ Funcionalidade: Aprender Cucumber
     Quando criar os steps
     Então o teste vai funcionar
 
+@ignore
 Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
     Dado que o ticket é AB167
     Dado que o ticket especial é AB167
@@ -44,6 +46,7 @@ Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
     Dado que o nome do passageiro é "Cicrano de Oliveira"
     Dado que o telefone do passageiro é 9888-8888
 
+@ignore
 Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
     Dado que o ticket é CD123
     Dado que o ticket é AG1234
